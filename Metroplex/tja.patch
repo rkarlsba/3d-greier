@@ -1,0 +1,129 @@
+diff --git a/Metroplex/printer.cfg b/Metroplex/printer.cfg
+index 40c79f7..8760545 100644
+--- a/Metroplex/printer.cfg
++++ b/Metroplex/printer.cfg
+@@ -1,4 +1,5 @@
+-# vim:ft=dosini
++# vim:ft=klipper
++#
+ # Generic Recore config
+ 
+ # The STM32F031 mcu
+@@ -19,8 +20,7 @@ max_velocity: 500
+ max_accel: 3000
+ max_z_velocity: 150
+ #max_z_accel: 50
+-#delta_radius = 250# towers
+-#delta_radius = 220
++delta_radius: 227.687496
+ 
+ # In order to enable 100 times gain for thermocouples,
+ [static_digital_output enable_high_power]
+@@ -52,7 +52,7 @@ ref_resistor: 6800
+ uart_pin: ar100:PB1
+ tx_pin: ar100:PB0
+ uart_address: 1
+-run_current: 0.500
++run_current: 0.800
+ hold_current: 0.500
+ stealthchop_threshold: 250
+ driver_internal_rsense: 1
+@@ -62,7 +62,7 @@ ref_resistor: 6800
+ uart_pin: ar100:PB1
+ tx_pin: ar100:PB0
+ uart_address: 2
+-run_current: 0.500
++run_current: 0.800
+ hold_current: 0.500
+ stealthchop_threshold: 250
+ driver_internal_rsense: 1
+@@ -86,10 +86,8 @@ microsteps: 16
+ endstop_pin: !ar100:PH9
+ homing_speed: 75
+ second_homing_speed: 5
+-
+-#angle: 0
+-#arm_length: 407
+-#position_endstop: 448
++arm_length: 407.000000
++position_endstop: 448.087279
+ 
+ [stepper_b]
+ step_pin: ar100:PL5
+@@ -99,8 +97,8 @@ rotation_distance: 40
+ endstop_pin: !ar100:PH8
+ homing_speed: 75
+ second_homing_speed: 5
+-
+-#angle: 120
++arm_length: 407.000000
++position_endstop: 447.061441
+ 
+ [stepper_c]
+ step_pin: ar100:PL6
+@@ -110,8 +108,8 @@ rotation_distance: 40
+ endstop_pin: !ar100:PH7
+ homing_speed: 75
+ second_homing_speed: 5
+-
+-#angle: 240
++arm_length: 407.000000
++position_endstop: 443.741503
+ 
+ [extruder]
+ step_pin: ar100:PL7
+@@ -196,40 +194,18 @@ gcode_id: Current
+ 
+ [delta_calibrate]
+ radius: 150
++height0: 0.0
++height0_pos: 35706.000,35706.000,35706.000
++height1: 0.0
++height1_pos: 38093.000,31889.000,46481.000
++height2: 0.0
++height2_pos: 45478.000,31897.000,37755.000
++height3: 0.0
++height3_pos: 44527.000,37418.000,31901.000
++height4: 0.0
++height4_pos: 36848.000,42336.000,32329.000
++height5: 0.0
++height5_pos: 32305.000,43150.000,37153.000
++height6: 0.0
++height6_pos: 32237.000,37417.000,43953.000
+ 
+-#*# <---------------------- SAVE_CONFIG ---------------------->
+-#*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
+-#*#
+-#*# [printer]
+-#*# delta_radius = 227.687496
+-#*#
+-#*# [stepper_a]
+-#*# angle = 0.082509
+-#*# arm_length = 407.000000
+-#*# position_endstop = 448.087279
+-#*#
+-#*# [stepper_b]
+-#*# angle = 119.880002
+-#*# arm_length = 407.000000
+-#*# position_endstop = 447.061441
+-#*#
+-#*# [stepper_c]
+-#*# angle = 240.000000
+-#*# arm_length = 407.000000
+-#*# position_endstop = 443.741503
+-#*#
+-#*# [delta_calibrate]
+-#*# height0 = 0.0
+-#*# height0_pos = 35706.000,35706.000,35706.000
+-#*# height1 = 0.0
+-#*# height1_pos = 38093.000,31889.000,46481.000
+-#*# height2 = 0.0
+-#*# height2_pos = 45478.000,31897.000,37755.000
+-#*# height3 = 0.0
+-#*# height3_pos = 44527.000,37418.000,31901.000
+-#*# height4 = 0.0
+-#*# height4_pos = 36848.000,42336.000,32329.000
+-#*# height5 = 0.0
+-#*# height5_pos = 32305.000,43150.000,37153.000
+-#*# height6 = 0.0
+-#*# height6_pos = 32237.000,37417.000,43953.000
