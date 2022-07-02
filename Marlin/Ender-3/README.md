@@ -1,1 +1,1 @@
-# Marlin-konfig for Ender 3 (aka Rehabinator)
+# Marlin-konfig for Ender 3
